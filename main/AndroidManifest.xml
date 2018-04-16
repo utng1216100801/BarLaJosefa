@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="mx.edu.utng.lajosefa">
+
+    <!--
+     The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+     Google Maps Android API v2, but you must specify either coarse or fine
+     location permissions for the 'MyLocation' functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity" />
+        <activity android:name=".activities.LoginGoogleActivity" />
+        <activity
+            android:name=".Navigation_drawerActivity"
+            android:label="@string/title_activity_navigation_drawer"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--
+         The API key for Google Maps-based APIs is defined as a string resource.
+         (See the file "res/values/google_maps_api.xml").
+         Note that the API key is linked to the encryption key used to sign the APK.
+         You need a different API key for each encryption key, including the release key that is used to
+         sign the APK for publishing.
+         You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDUj7Jbm9eB-kjU9GTP5IpKC8X7qFIAZUQ" />
+
+        <activity
+            android:name=".activities.VideoActivity"
+            android:label="Videos" />
+        <activity android:name=".activities.IntroActivity" />
+        <activity android:name=".activities.LadyActivity" />
+        <activity
+            android:name=".activities.MainDrinkActivity"
+            android:label="Bebidas" />
+        <activity
+            android:name=".AdminActivity"
+            android:label="Administrador" />
+        <activity
+            android:name=".activities.ImagesDrinkActivity"
+            android:label="Bebidas" />
+        <activity
+            android:name=".activities.ImagesReserveActivity"
+            android:label="Reservación" />
+        <activity
+            android:name=".activities.ScheduleActivity"
+            android:label="Horarios" />
+        <activity
+            android:name=".activities.ScheduleImagesActivity"
+            android:label="Horarios" />
+        <activity
+            android:name=".activities.PromotionActivity"
+            android:label="Promociones" />
+        <activity
+            android:name=".activities.PromotionImagesActivity"
+            android:label="Promociones" />
+        <activity
+            android:name=".activities.LinkActivity"
+            android:label="Redes Sociales" />
+        <activity
+            android:name=".activities.CommentsActivity"
+            android:label="Comentarios" />
+        <activity android:name=".activities.SecondActivity" />
+        <activity
+            android:name=".activities.BotellaActivity"
+            android:label="Juego" />
+        <activity
+            android:name=".activities.MainEventActivity"
+            android:label="Eventos" />
+        <activity
+            android:name=".activities.MainReserveActivity"
+            android:label="Reservaciones" />
+        <activity
+            android:name=".activities.ChatActivity"
+            android:label="Mensajes" />
+
+        <service android:name=".service.MyFirebaseIdService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".service.MyFirebaseMessaging">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".activities.GalleryActivity"
+            android:label="Galería" />
+        <activity
+            android:name=".activities.ImageGalleryActivity"
+            android:label="Galería" />
+        <activity android:name=".activities.AcercaDeActivity"></activity>
+    </application>
+
+</manifest>
